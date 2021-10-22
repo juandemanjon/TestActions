@@ -19,4 +19,8 @@ jobs:
 
     steps:
     - name: Download
-      run: (new-object System.Net.WebClient).`DownloadFile("https://github.com/open-telemetry/opentelemetry-cpp/archive/refs/tags/${{ github.event.inputs.otel_version }}.zip"`, ${{ github.event.inputs.otel_version }}.zip")
+      run: |
+        $url = "https://github.com/open-telemetry/opentelemetry-cpp/archive/refs/tags/${{ github.event.inputs.otel_version }}.zip"
+        $output = "$Env:GITHUB_WORKSPACE\${{ github.event.inputs.otel_version }}.zip"
+        (New-Object System.Net.WebClient).DownloadFile($url, $output)
+  
