@@ -28,6 +28,7 @@ jobs:
       - name: fetch opentelemetry-cpp
         uses: dawidd6/action-download-artifact@v2
         with:
+          workflow: build.yml
           repo: open-telemetry/opentelemetry-cpp
 
       # Runs a single command using the runners shell
