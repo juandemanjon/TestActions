@@ -15,7 +15,7 @@ on:
 
 jobs:
   GetOpenTelemetryCpp:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
     - name: Download
