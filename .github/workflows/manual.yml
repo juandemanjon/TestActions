@@ -9,8 +9,8 @@ on:
     # Inputs the workflow accepts.
     inputs:
       otel_version:
-        description: 'OpenTelemetry-cpp version to build'
-        default: 'See https://github.com/open-telemetry/opentelemetry-cpp/releases/latest'
+        description: 'OpenTelemetry-cpp version to build. See https://github.com/open-telemetry/opentelemetry-cpp/releases/latest'
+        default: 'v1.0.1'
         required: true
 
 jobs:
