@@ -24,6 +24,14 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
+      
+      - name: fetch opentelemetry-cpp
+        uses: dawidd6/action-download-artifact@v2
+        with:
+          github_token: ${{secrets.GITHUB_TOKEN}}
+          workflow: build.yml
+          name: opentelemetry-cpp-latest_${{env.target_triplet}}
+          repo: open-telemetry/opentelemetry-cpp
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
